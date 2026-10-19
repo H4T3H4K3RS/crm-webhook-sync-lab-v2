@@ -9,5 +9,5 @@ def get_database_path() -> str:
 
 
 def get_webhook_secret() -> str | None:
-    """Секрет для проверки подписи webhook (дополнительное задание, оценка 9)."""
+    """Секрет для проверки подписи webhook (дополнительное задание, уровень П)."""
     return os.environ.get("WEBHOOK_SECRET") or None

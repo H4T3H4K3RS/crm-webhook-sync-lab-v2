@@ -25,7 +25,7 @@ def health() -> dict:
 
 @app.post("/webhooks/crm", response_model=WebhookResult)
 def receive_webhook(event: DealStatusChangedEvent) -> WebhookResult:
-    # TODO (дополнительно, оценка 9): проверка подписи X-CRM-Signature.
+    # TODO (дополнительно, уровень П): проверка подписи X-CRM-Signature.
     result = process_event(event)
     return WebhookResult(result=result, event_id=event.event_id, deal_id=event.deal_id)
 

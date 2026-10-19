@@ -1,4 +1,4 @@
-"""Оценка 10: конкурентная доставка и конфликт event_id."""
+"""Уровень Э (экспертный): конкурентная доставка и конфликт event_id."""
 
 import random
 from concurrent.futures import ThreadPoolExecutor

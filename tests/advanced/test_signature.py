@@ -1,4 +1,4 @@
-"""Оценка 9: проверка подписи webhook (HMAC-SHA256)."""
+"""Уровень П (продвинутый): проверка подписи webhook (HMAC-SHA256)."""
 
 import hashlib
 import hmac
