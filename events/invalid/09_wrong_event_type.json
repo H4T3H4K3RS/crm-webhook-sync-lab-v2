@@ -1,0 +1,11 @@
+{
+  "description": "Неподдерживаемый тип события",
+  "payload": {
+    "event_id": "evt_d9001_v1",
+    "event_type": "deal.deleted",
+    "deal_id": "D-9001",
+    "status": "new",
+    "version": 1,
+    "occurred_at": "2026-10-01T09:00:00Z"
+  }
+}

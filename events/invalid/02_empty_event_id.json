@@ -1,0 +1,11 @@
+{
+  "description": "Пустой event_id",
+  "payload": {
+    "event_id": "",
+    "event_type": "deal.status_changed",
+    "deal_id": "D-9001",
+    "status": "new",
+    "version": 1,
+    "occurred_at": "2026-10-01T09:00:00Z"
+  }
+}

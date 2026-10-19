@@ -1,0 +1,41 @@
+{
+  "description": "Обычная доставка: события приходят по порядку, каждое один раз.",
+  "events": [
+    {
+      "event_id": "evt_d1001_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1001",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "event_id": "evt_d1001_v2",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1001",
+      "status": "qualification",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:30:00Z"
+    },
+    {
+      "event_id": "evt_d1001_v3",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1001",
+      "status": "proposal",
+      "version": 3,
+      "occurred_at": "2026-10-01T10:30:00Z"
+    }
+  ],
+  "expected_results": [
+    "applied",
+    "applied",
+    "applied"
+  ],
+  "expected_final_state": [
+    {
+      "deal_id": "D-1001",
+      "status": "proposal",
+      "version": 3
+    }
+  ]
+}

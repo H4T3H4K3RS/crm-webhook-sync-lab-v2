@@ -1,0 +1,41 @@
+{
+  "description": "Два разных события с одинаковой версией: второе не должно перезаписать первое.",
+  "events": [
+    {
+      "event_id": "evt_d1004_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1004",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "event_id": "evt_d1004_v2",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1004",
+      "status": "qualification",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:05:00Z"
+    },
+    {
+      "event_id": "evt_d1004_v2_conflicting",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1004",
+      "status": "lost",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:06:00Z"
+    }
+  ],
+  "expected_results": [
+    "applied",
+    "applied",
+    "stale"
+  ],
+  "expected_final_state": [
+    {
+      "deal_id": "D-1004",
+      "status": "qualification",
+      "version": 2
+    }
+  ]
+}

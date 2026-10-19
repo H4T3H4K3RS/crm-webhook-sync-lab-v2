@@ -1,0 +1,11 @@
+{
+  "description": "Версия не является числом",
+  "payload": {
+    "event_id": "evt_d9001_v1",
+    "event_type": "deal.status_changed",
+    "deal_id": "D-9001",
+    "status": "new",
+    "version": "two",
+    "occurred_at": "2026-10-01T09:00:00Z"
+  }
+}

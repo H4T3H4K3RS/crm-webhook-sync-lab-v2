@@ -1,0 +1,73 @@
+{
+  "description": "События нескольких сделок перемешаны: версии отслеживаются для каждой сделки независимо.",
+  "events": [
+    {
+      "event_id": "evt_d2001_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-2001",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "event_id": "evt_d2002_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-2002",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:01:00Z"
+    },
+    {
+      "event_id": "evt_d2001_v3",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-2001",
+      "status": "won",
+      "version": 3,
+      "occurred_at": "2026-10-01T09:50:00Z"
+    },
+    {
+      "event_id": "evt_d2002_v2",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-2002",
+      "status": "lost",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:25:00Z"
+    },
+    {
+      "event_id": "evt_d2001_v2",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-2001",
+      "status": "proposal",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:20:00Z"
+    },
+    {
+      "event_id": "evt_d2002_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-2002",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:01:00Z"
+    }
+  ],
+  "expected_results": [
+    "applied",
+    "applied",
+    "applied",
+    "applied",
+    "stale",
+    "duplicate"
+  ],
+  "expected_final_state": [
+    {
+      "deal_id": "D-2001",
+      "status": "won",
+      "version": 3
+    },
+    {
+      "deal_id": "D-2002",
+      "status": "lost",
+      "version": 2
+    }
+  ]
+}

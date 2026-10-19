@@ -1,0 +1,77 @@
+{
+  "description": "Повторная доставка: CRM повторно отправляет уже доставленные события.",
+  "events": [
+    {
+      "event_id": "evt_d1002_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "event_id": "evt_d1002_v2",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "qualification",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:10:00Z"
+    },
+    {
+      "event_id": "evt_d1002_v2",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "qualification",
+      "version": 2,
+      "occurred_at": "2026-10-01T09:10:00Z"
+    },
+    {
+      "event_id": "evt_d1002_v1",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "new",
+      "version": 1,
+      "occurred_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "event_id": "evt_d1002_v3",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "negotiation",
+      "version": 3,
+      "occurred_at": "2026-10-01T09:20:00Z"
+    },
+    {
+      "event_id": "evt_d1002_v4",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "won",
+      "version": 4,
+      "occurred_at": "2026-10-01T09:40:00Z"
+    },
+    {
+      "event_id": "evt_d1002_v4",
+      "event_type": "deal.status_changed",
+      "deal_id": "D-1002",
+      "status": "won",
+      "version": 4,
+      "occurred_at": "2026-10-01T09:40:00Z"
+    }
+  ],
+  "expected_results": [
+    "applied",
+    "applied",
+    "duplicate",
+    "duplicate",
+    "applied",
+    "applied",
+    "duplicate"
+  ],
+  "expected_final_state": [
+    {
+      "deal_id": "D-1002",
+      "status": "won",
+      "version": 4
+    }
+  ]
+}
